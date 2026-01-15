@@ -27,7 +27,20 @@ While foundational controls are in place, several areas were identified where go
 Recommendations were focused on reducing residual risk through proportionate, risk-based improvements, including security awareness training, formalized review processes, and enhanced monitoring capabilities.
 
 ## 8. Key Judgement Calls
-Several decisions were made to balance risk reduction with operational practicality, including maintaining a medium residual risk rating and prioritizing governance improvements over additional technical controls.
+
+Several key decisions were made during this assessment to balance risk reduction with operational practicality in a mid-size SaaS environment:
+
+- **Limiting the risk register to three risks:**  
+  The assessment focused on the most material cyber risks impacting customer data rather than attempting to catalogue all possible threats. This approach prioritised depth of analysis and actionable outcomes over exhaustive coverage.
+
+- **Maintaining a medium residual risk rating:**  
+  Despite the presence of baseline controls, residual risk was assessed as medium to reflect the realistic likelihood of control failure and evolving threat activity. Residual risk was not artificially reduced to low in the absence of evidence demonstrating sustained control effectiveness.
+
+- **Avoiding mandatory periodic password rotation:**  
+  Given the presence of multi-factor authentication, recommendations focused on reducing phishing effectiveness and improving detection rather than enforcing routine password changes, which may introduce usability issues without proportionate risk reduction.
+
+- **Prioritising governance improvements over additional technical controls:**  
+  Recommendations emphasised formalised review processes, monitoring, and accountability to strengthen the control environment sustainably rather than introducing new tools or complex technical controls.
 
 ## 9. Lessons Learned
 This assessment reinforced the importance of risk-based decision-making, clear ownership, and aligning controls to both business context and recognised frameworks.
