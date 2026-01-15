@@ -43,5 +43,7 @@ Several key decisions were made during this assessment to balance risk reduction
   Recommendations emphasised formalised review processes, monitoring, and accountability to strengthen the control environment sustainably rather than introducing new tools or complex technical controls.
 
 ## 9. Lessons Learned
-This assessment reinforced the importance of risk-based decision-making, clear ownership, and aligning controls to both business context and recognised frameworks.
 
+This assessment highlighted the importance of applying a risk-based approach rather than relying solely on prescriptive controls or framework checklists. In particular, it reinforced the value of clearly defining scope, prioritising material risks, and documenting ownership and accountability.
+
+The process also demonstrated that effective cyber risk management depends as much on governance and consistency as on technical controls. Iterative review and refinement of risks and recommendations improved both clarity and defensibility of the final outputs.
