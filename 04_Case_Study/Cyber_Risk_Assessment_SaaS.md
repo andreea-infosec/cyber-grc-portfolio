@@ -23,6 +23,10 @@ The organization has implemented baseline security controls including multi-fact
 ## 6. Gaps and Observations
 While foundational controls are in place, several areas were identified where governance and assurance could be strengthened, including consistency of access reviews, ongoing vendor oversight, and monitoring of cloud configuration changes.
 
+### Evidence Considerations
+
+Control effectiveness would be supported through evidence such as access review records, security awareness training completion reports, authentication and logging records, vendor risk assessment documentation, and cloud configuration review outputs. These artifacts would be reviewed periodically as part of assurance or audit activities to validate ongoing control operation.
+
 ## 7. Recommended Actions
 Recommendations were focused on reducing residual risk through proportionate, risk-based improvements, including security awareness training, formalized review processes, and enhanced monitoring capabilities.
 
