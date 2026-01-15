@@ -31,7 +31,8 @@ This portfolio applies a pragmatic, risk-based approach to Cyber GRC, focusing o
 - Prioritisation of material risks over exhaustive threat catalogues  
 - Selection of proportionate, defensible controls  
 - Clear ownership and accountability  
-- Use of recognised frameworks as guidance rather than prescriptive checklists  
+- Use of recognised frameworks as guidance rather than prescriptive checklists
+
 
 Decisions were made to balance security risk reduction with operational practicality in a mid-size SaaS context.
 
@@ -48,3 +49,8 @@ AI tools were used for drafting and structuring content; all risk assessments, c
 
 Andreea  
 Cyber GRC | Information Security | Risk-based governance
+
+## Background
+
+Foundational security knowledge informed by ongoing CompTIA Security+ studies, supporting risk identification and control discussions throughout the portfolio.
+
