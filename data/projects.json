@@ -1,0 +1,14 @@
+[
+  {
+    "name": "GRC Dashboard",
+    "description": "Developed a compliance dashboard to track ISO 27001 gaps across business units."
+  },
+  {
+    "name": "Risk Assessment Program",
+    "description": "Conducted risk assessments using NIST framework and implemented mitigation strategies."
+  },
+  {
+    "name": "Policy Implementation",
+    "description": "Implemented company-wide security policies aligned with ISO 27001 and SOC 2 standards."
+  }
+]
