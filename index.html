@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andreea's Cyber GRC Portfolio</title>
+  <title>Andreea’s Cyber GRC Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -28,22 +28,156 @@
       <h2>Overview</h2>
       <p>
         This portfolio demonstrates risk-based Cyber Governance, Risk, and Compliance (GRC) thinking in a simulated SaaS environment.
-        It focuses on identifying, assessing, and managing cyber risks impacting customer data, emphasising governance, proportional controls,
-        and defensible decision-making rather than checklist compliance.
+        It focuses on identifying, assessing, and managing cyber risks impacting customer data, emphasising governance, proportional
+        controls, and defensible decision-making rather than checklist compliance.
       </p>
 
       <div class="callout">
-        <p><strong>Focus:</strong> customer data risk, SaaS operating realities, and practical governance aligned to recognised frameworks (ISO 27001 and NIST CSF).</p>
+        <p>
+          <strong>Focus:</strong> customer data risk, SaaS operating realities, and practical governance aligned to recognised frameworks
+          (ISO 27001 and NIST CSF).
+        </p>
       </div>
     </section>
 
     <!-- SAAS CONTEXT -->
     <section id="context">
       <h2>SaaS Environment Context</h2>
-
       <p>
-        This portfolio is based on a simulated mid-size SaaS organisation providing a cloud-based customer relationship management (CRM) platform.
+        This portfolio is based on a simulated mid-size SaaS organization providing a cloud-based customer relationship management (CRM) platform.
       </p>
 
-      <h3>Organisation Profile</h3>
-      <u
+      <h3>Organization Profile</h3>
+      <ul class="bullet-list">
+        <li>Approximately 200 employees</li>
+        <li>B2B SaaS organization operating in the UK, EU, and US</li>
+        <li>Cloud-hosted environment</li>
+        <li>Processes customer personal data (PII)</li>
+      </ul>
+
+      <h3>Technology Overview</h3>
+      <ul class="bullet-list">
+        <li>Cloud infrastructure hosting application and data</li>
+        <li>Centralized identity and access management</li>
+        <li>Third-party service integrations</li>
+        <li>Logging and monitoring capabilities</li>
+      </ul>
+
+      <h3>Key Business Priorities</h3>
+      <ul class="bullet-list">
+        <li>Protection of customer data</li>
+        <li>Service availability and reliability</li>
+        <li>Regulatory compliance (e.g. data protection requirements)</li>
+      </ul>
+
+      <p>
+        This context is used to scope risk identification, control assessment, and recommended actions throughout the portfolio.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Portfolio Components</h2>
+      <p class="muted">
+        The portfolio items below are loaded from <code>data/projects.json</code>.
+      </p>
+
+      <div id="projectsContainer" class="projects-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- APPROACH -->
+    <section id="approach">
+      <h2>Approach to Cyber GRC</h2>
+      <p>
+        This portfolio applies a pragmatic, risk-based approach to Cyber GRC, prioritising material risks and proportionate controls.
+        Frameworks are used as guidance rather than prescriptive checklists.
+      </p>
+
+      <ul class="bullet-list">
+        <li>Prioritisation of material risks over exhaustive threat catalogues</li>
+        <li>Selection of proportionate, defensible controls</li>
+        <li>Clear ownership and accountability</li>
+        <li>Use of recognised frameworks as guidance (ISO 27001 and NIST CSF)</li>
+      </ul>
+
+      <p>
+        Decisions were made to balance security risk reduction with operational practicality in a mid-size SaaS context.
+      </p>
+    </section>
+
+    <!-- NOTES -->
+    <section id="notes">
+      <h2>Notes</h2>
+      <ul class="bullet-list">
+        <li>This portfolio is based on a simulated scenario and does not represent a real organisation.</li>
+        <li>AI tools were used for drafting and structuring content; all risk assessments and decisions were reviewed and refined manually.</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <strong>Andreea</strong><br />
+        Cyber GRC | Information Security | Risk-based governance
+      </p>
+
+      <div class="contact-grid">
+        <div>
+          <p class="muted">Email</p>
+          <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        </div>
+        <div>
+          <p class="muted">LinkedIn</p>
+          <p><a href="#" target="_blank" rel="noopener noreferrer">linkedin.com/in/yourprofile</a></p>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top: 1rem;">
+        Background: Foundational security knowledge supported by ongoing CompTIA Security+ studies.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Andreea Infosec</p>
+  </footer>
+
+  <script>
+    async function loadProjects() {
+      const container = document.getElementById("projectsContainer");
+
+      try {
+        const response = await fetch("data/projects.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("Could not load data/projects.json");
+
+        const projects = await response.json();
+        container.innerHTML = "";
+
+        projects.forEach(p => {
+          const card = document.createElement("div");
+          card.className = "project-card";
+
+          card.innerHTML = `
+            <h3>${p.name}</h3>
+            <p>${p.description}</p>
+            ${p.link ? `<p class="project-link"><a class="button-link" href="${p.link}" target="_blank" rel="noopener noreferrer">${p.linkText || "View"}</a></p>` : ""}
+          `;
+
+          container.appendChild(card);
+        });
+      } catch (err) {
+        container.innerHTML = `
+          <div class="project-card">
+            <h3>Portfolio items could not be loaded</h3>
+            <p class="muted">Please confirm <code>data/projects.json</code> exists and contains valid JSON.</p>
+          </div>
+        `;
+      }
+    }
+
+    loadProjects();
+  </script>
+</body>
+</html>
