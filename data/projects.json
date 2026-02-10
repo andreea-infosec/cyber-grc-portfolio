@@ -2,25 +2,25 @@
   {
     "name": "SaaS Environment Context",
     "description": "Defined business and technology context for a simulated mid-size B2B SaaS CRM organisation used to scope cyber risk assessment activities.",
-    "link": "01_Context/README.md",
+    "link": "/cyber-grc-portfolio/01_Context/README.md",
     "linkText": "View context"
   },
   {
     "name": "Cyber Risk Register (Excel)",
     "description": "Risk register identifying material cyber risks impacting customer data, assessed for likelihood, impact, control effectiveness, residual risk, ownership, and recommended actions.",
-    "link": "02_Risk_Register/Cyber_Risk_Register_SaaS.xlsx",
+    "link": "/cyber-grc-portfolio/02_Risk_Register/Cyber_Risk_Register_SaaS.xlsx",
     "linkText": "Download risk register"
   },
   {
     "name": "Control Mapping – ISO 27001 & NIST CSF",
     "description": "Risk-based mapping of identified cyber risks to relevant ISO 27001 Annex A controls and NIST Cybersecurity Framework categories.",
-    "link": "03_Control_Mapping/README.md",
+    "link": "/cyber-grc-portfolio/03_Control_Mapping/README.md",
     "linkText": "View control mapping"
   },
   {
     "name": "End-to-End Case Study",
     "description": "Narrative cyber risk assessment demonstrating methodology, judgement calls, and lessons learned in a SaaS environment.",
-    "link": "04_Case_Study/README.md",
+    "link": "/cyber-grc-portfolio/04_Case_Study/README.md",
     "linkText": "View case study"
   }
 ]
