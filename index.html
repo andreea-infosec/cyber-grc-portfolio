@@ -14,6 +14,7 @@
       <nav>
         <a href="#overview">Overview</a>
         <a href="#context">Environment</a>
+        <a href="#methodology">Methodology</a>
         <a href="#projects">Portfolio</a>
         <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
@@ -28,8 +29,8 @@
       <h2>Overview</h2>
       <p>
         This portfolio demonstrates risk-based Cyber Governance, Risk, and Compliance (GRC) thinking in a simulated SaaS environment.
-        It focuses on identifying, assessing, and managing cyber risks impacting customer data, emphasising governance, proportional
-        controls, and defensible decision-making rather than checklist compliance.
+        It focuses on identifying, assessing, and managing cyber risks impacting customer data, emphasising governance,
+        proportional controls, and defensible decision-making rather than checklist compliance.
       </p>
 
       <div class="callout">
@@ -44,13 +45,13 @@
     <section id="context">
       <h2>SaaS Environment Context</h2>
       <p>
-        This portfolio is based on a simulated mid-size SaaS organization providing a cloud-based customer relationship management (CRM) platform.
+        This portfolio is based on a simulated mid-size SaaS organisation providing a cloud-based customer relationship management (CRM) platform.
       </p>
 
-      <h3>Organization Profile</h3>
+      <h3>Organisation Profile</h3>
       <ul class="bullet-list">
         <li>Approximately 200 employees</li>
-        <li>B2B SaaS organization operating in the UK, EU, and US</li>
+        <li>B2B SaaS organisation operating in the UK, EU, and US</li>
         <li>Cloud-hosted environment</li>
         <li>Processes customer personal data (PII)</li>
       </ul>
@@ -58,7 +59,7 @@
       <h3>Technology Overview</h3>
       <ul class="bullet-list">
         <li>Cloud infrastructure hosting application and data</li>
-        <li>Centralized identity and access management</li>
+        <li>Centralised identity and access management</li>
         <li>Third-party service integrations</li>
         <li>Logging and monitoring capabilities</li>
       </ul>
@@ -69,9 +70,43 @@
         <li>Service availability and reliability</li>
         <li>Regulatory compliance (e.g. data protection requirements)</li>
       </ul>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section id="methodology">
+      <h2>Risk Identification Methodology</h2>
 
       <p>
-        This context is used to scope risk identification, control assessment, and recommended actions throughout the portfolio.
+        Cyber risks were identified using a structured, risk-based methodology grounded in the defined SaaS business and technology context,
+        rather than through exhaustive threat catalogues or vulnerability-driven analysis.
+      </p>
+
+      <h3>Methodology Overview</h3>
+      <ul class="bullet-list">
+        <li>Defined business scope, operating model, and regulatory exposure</li>
+        <li>Identified critical assets, with particular focus on customer personal data</li>
+        <li>Analysed high-risk system components such as identity and access management, cloud infrastructure, and third-party integrations</li>
+        <li>Developed risk statements by combining assets, plausible threat scenarios, and realistic weaknesses</li>
+        <li>Prioritised risks based on potential business impact and likelihood in a mid-size SaaS environment</li>
+      </ul>
+
+      <p>
+        This approach ensured focus on material risks that would reasonably concern business and security stakeholders,
+        rather than attempting to enumerate all possible threats.
+      </p>
+
+      <h3>Use of Frameworks</h3>
+      <p>
+        ISO 27001 and the NIST Cybersecurity Framework (NIST CSF) were used as reference frameworks to:
+      </p>
+      <ul class="bullet-list">
+        <li>Validate that identified risks aligned with recognised security domains</li>
+        <li>Support consistent assessment of control coverage</li>
+        <li>Inform proportional and defensible control selection</li>
+      </ul>
+
+      <p class="muted">
+        Frameworks were applied as guidance rather than prescriptive checklists.
       </p>
     </section>
 
@@ -79,30 +114,31 @@
     <section id="projects">
       <h2>Portfolio Components</h2>
       <p class="muted">
-        The portfolio items below are loaded from <code>data/projects.json</code>.
+        The portfolio components below demonstrate how the methodology was applied in practice.
       </p>
 
-      <div id="projectsContainer" class="projects-grid" aria-live="polite"></div>
+      <div id="projectsContainer" class="projects-grid" aria-live="polite">
+        <div class="project-card">
+          <h3>Loading portfolio items…</h3>
+          <p class="muted">If this message persists, the data source could not be loaded.</p>
+        </div>
+      </div>
     </section>
 
     <!-- APPROACH -->
     <section id="approach">
       <h2>Approach to Cyber GRC</h2>
       <p>
-        This portfolio applies a pragmatic, risk-based approach to Cyber GRC, prioritising material risks and proportionate controls.
-        Frameworks are used as guidance rather than prescriptive checklists.
+        This portfolio reflects a pragmatic approach to Cyber GRC, balancing security risk reduction with operational practicality
+        in a mid-size SaaS organisation.
       </p>
 
       <ul class="bullet-list">
         <li>Prioritisation of material risks over exhaustive threat catalogues</li>
         <li>Selection of proportionate, defensible controls</li>
-        <li>Clear ownership and accountability</li>
-        <li>Use of recognised frameworks as guidance (ISO 27001 and NIST CSF)</li>
+        <li>Clear ownership and accountability for risk treatment</li>
+        <li>Alignment with business priorities and regulatory expectations</li>
       </ul>
-
-      <p>
-        Decisions were made to balance security risk reduction with operational practicality in a mid-size SaaS context.
-      </p>
     </section>
 
     <!-- NOTES -->
@@ -110,7 +146,7 @@
       <h2>Notes</h2>
       <ul class="bullet-list">
         <li>This portfolio is based on a simulated scenario and does not represent a real organisation.</li>
-        <li>AI tools were used for drafting and structuring content; all risk assessments and decisions were reviewed and refined manually.</li>
+        <li>AI tools were used for drafting and structuring content; all risk assessments, control selections, and judgement decisions were reviewed and refined manually.</li>
       </ul>
     </section>
 
@@ -147,10 +183,11 @@
   <script>
     async function loadProjects() {
       const container = document.getElementById("projectsContainer");
+      const PROJECTS_JSON = "/cyber-grc-portfolio/data/projects.json";
 
       try {
-        const response = await fetch("data/projects.json", { cache: "no-store" });
-        if (!response.ok) throw new Error("Could not load data/projects.json");
+        const response = await fetch(PROJECTS_JSON, { cache: "no-store" });
+        if (!response.ok) throw new Error("Could not load projects.json");
 
         const projects = await response.json();
         container.innerHTML = "";
@@ -167,11 +204,12 @@
 
           container.appendChild(card);
         });
+
       } catch (err) {
         container.innerHTML = `
           <div class="project-card">
             <h3>Portfolio items could not be loaded</h3>
-            <p class="muted">Please confirm <code>data/projects.json</code> exists and contains valid JSON.</p>
+            <p class="muted">Please verify <code>data/projects.json</code> exists and is accessible.</p>
           </div>
         `;
       }
