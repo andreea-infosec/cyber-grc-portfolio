@@ -2,8 +2,8 @@
   {
     "name": "SaaS Environment Context",
     "description": "Defined business and technology context for a simulated mid-size B2B SaaS CRM organisation used to scope cyber risk assessment activities.",
-    "link": "/cyber-grc-portfolio/01_Context/README.md",
-    "linkText": "View context"
+    "link": "https://github.com/andreea-infosec/cyber-grc-portfolio/tree/main/01_Context",
+    "linkText": "View context (GitHub)"
   },
   {
     "name": "Cyber Risk Register (Excel)",
@@ -14,13 +14,13 @@
   {
     "name": "Control Mapping – ISO 27001 & NIST CSF",
     "description": "Risk-based mapping of identified cyber risks to relevant ISO 27001 Annex A controls and NIST Cybersecurity Framework categories.",
-    "link": "/cyber-grc-portfolio/03_Control_Mapping/README.md",
-    "linkText": "View control mapping"
+    "link": "https://github.com/andreea-infosec/cyber-grc-portfolio/tree/main/03_Control_Mapping",
+    "linkText": "View control mapping (GitHub)"
   },
   {
     "name": "End-to-End Case Study",
     "description": "Narrative cyber risk assessment demonstrating methodology, judgement calls, and lessons learned in a SaaS environment.",
-    "link": "/cyber-grc-portfolio/04_Case_Study/README.md",
-    "linkText": "View case study"
+    "link": "https://github.com/andreea-infosec/cyber-grc-portfolio/tree/main/04_Case_Study",
+    "linkText": "View case study (GitHub)"
   }
 ]
